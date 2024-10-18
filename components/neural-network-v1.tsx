@@ -49,7 +49,7 @@ export function NeuralNetworkV1Component() {
     window.addEventListener("resize", resizeCanvas)
     resizeCanvas()
 
-    addNodes(1, addNode)
+    addNodes(2, addNode)
 
     const animate = () => {
       if (!ctx || !canvas) return
