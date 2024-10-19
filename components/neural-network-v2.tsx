@@ -108,7 +108,11 @@ export function NeuralNetworkV2Component() {
     <div className="relative w-full h-screen overflow-hidden bg-black">
       <canvas ref={canvasRef} className="absolute inset-0" />
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex max-sm:w-full max-sm:flex-col sm:space-x-4 gap-2 px-4">
-        <Button onClick={addNode} className="bg-green-500 hover:bg-green-600">
+        <Button
+          onClick={addNode}
+          className="bg-green-500 hover:bg-green-600"
+          disabled={nodes.length >= 40}
+        >
           <Plus className="mr-2 h-4 w-4" /> Add Node ({nodes.length})
         </Button>
         <Button
